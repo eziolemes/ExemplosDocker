@@ -8,5 +8,12 @@ app.get("/", (req, res) => {
 app.get("/oi", (req, res) => {
   res.send("Olá Docker!!!");
 });
+app.get("/about", (req, res) => {
+  res.send("Este é um exemplo de um app node rodando em um conteiner docker!!");
+});
 
-app.listen(3000);
+const port = 3000;
+
+app.listen(port, function() {
+  console.log(`Example app listening on ${port}!`);
+});
