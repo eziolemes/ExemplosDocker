@@ -14,11 +14,22 @@ $ cd ExemplosDocker
 # Intalar o node_modules
 $ yarn install
 ```
-Pronto, agora é só executar o docker-compose
+Agora crie uma imagem a partir do Dockerfile:
+```bash
+$ docker build -t lemes/dockernode .
+```
+- ```docker build``` cria uma imagem a partir do Dockerfile.
+- ```-t``` é o nome/tag da imagem.
+- ```lemes/dockernode``` nome que escolhi para imagem.
+- ```.``` onde o Dockerfile está.
+
+Se rodar o comando ```docker images``` verá que a imagem foi criada.
+
+Pronto, agora é só executar o docker-compose:
 ```bash
 $ docker-compose up -d
 ```
-A aplicação irá subir na porta 3000, acesse pelo navegador localhost:3000 e será feito uma requisição na aplicação que esta rodando no container
+A aplicação irá subir na porta 3000, acesse pelo navegador localhost:3000 e será feito uma requisição na aplicação que esta rodando no container.
 
 
 ## Dockerfile
@@ -27,7 +38,7 @@ Com o Dockerfile você pode criar uma imagem do seu projeto e executá-lo atrav�
 
 ## Docker compose
 
-Com o docker compose você pode criar uma estrutura com vários container e gerenciá-los.
+Com o docker compose você pode criar uma estrutura com vários containers e gerenciá-los.
 
 <h4 align="center"> 
 	🚧  Em construção...  🚧
